@@ -4222,3 +4222,76 @@ body.contact-page {
 		margin-top: 0 !important;
 	}
 }
+/* FIX LANDING PAGE HEADER BUTTONS ON MOBILE PORTRAIT */
+@media screen and (max-width: 736px) {
+	body.landing #header {
+		background: rgba(43, 43, 43, 0.95) !important;
+	}
+	
+	body.landing #header nav {
+		display: block !important;
+		position: absolute;
+		right: 10px;
+		top: 0;
+		height: 60px;
+		line-height: 60px;
+	}
+	
+	body.landing #header nav > ul {
+		display: flex;
+		align-items: center;
+		height: 60px;
+		margin: 0;
+		padding: 0;
+	}
+	
+	body.landing #header nav > ul > li {
+		margin: 0 5px;
+	}
+	
+	body.landing #header nav > ul > li > a {
+		font-size: 0.85em;
+		padding: 0 0.75em;
+		white-space: nowrap;
+		color: #fff !important;
+		height: 2.5em;
+		line-height: 2.5em;
+	}
+	
+	body.landing #header nav > ul > li .button {
+		background-color: #8f9e29 !important;
+		color: #fff !important;
+		box-shadow: none !important;
+	}
+	
+	body.landing #header nav > ul > li .button:hover {
+		background-color: #737a21 !important;
+	}
+	
+	/* Hide dropdown menu items on mobile */
+	body.landing #header nav > ul > li > ul {
+		display: none !important;
+	}
+	
+	/* Ensure logo doesn't overlap buttons */
+	body.landing #header img {
+		max-width: 70px !important;
+		height: 45px !important;
+	}
+}
+
+/* EXTRA SMALL SCREENS - SIMPLIFY EVEN MORE */
+@media screen and (max-width: 480px) {
+	body.landing #header nav > ul > li:first-child {
+		display: none; /* Hide "Home" link on very small screens */
+	}
+	
+	body.landing #header nav > ul > li:nth-child(2) {
+		display: none; /* Hide "Layouts" dropdown on very small screens */
+	}
+	
+	body.landing #header nav > ul > li > a {
+		font-size: 0.8em;
+		padding: 0 0.5em;
+	}
+}
